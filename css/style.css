@@ -1,0 +1,816 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+.main_div{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+    position: relative;
+}
+nav{
+    width: 100%;
+    height: 12%;
+    background-color: transparent;
+    /* background-color: rgba(9, 5, 253, 0.897); */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.055);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+}
+nav .logo{
+    z-index: 999;
+    user-select: none;
+    width: 30%;
+    height: 100%;
+    place-items: center;
+    display: grid;
+    /* background-color: red; */
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+}
+nav .menu_items{
+    width: 50%;
+    /* background-color: red; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu_items a{
+    width: 20%;
+    height: 50%;
+    /* background-color: rgb(219, 199, 199); */
+    margin: 0 8px;
+    box-shadow: 0 0 3px rgb(0,0,0,.3);
+    border-radius: 4px;
+    overflow: hidden;
+    place-items: center;
+    display: grid;
+    text-decoration: none;
+    text-transform: capitalize;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    padding: 3px 10px;
+    transition-duration: 70ms;
+    background-color: #fff;
+}
+.menu_items a:active{
+    transform: scale(.9);
+    color: rgb(0, 0, 0);
+}
+nav .menu_set{
+    display: none;
+}
+
+.active_nav{
+    background: linear-gradient(to right,rgba(8, 233, 0, 0.863) 50%,rgb(0, 3, 190));
+    transition-duration: 200ms;
+}
+.sider_nav{
+    display: none;
+}
+
+.center_space{
+    width: 100%;
+    height: 100%;
+   background:linear-gradient(to right,rgba(8, 250, 0, 0.377) 50%,rgb(0, 3, 190)) ,url(../images/bs\ \(1\).jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   position: relative;
+   /* background-attachment: fixed; */
+}
+.center_space .text_box{
+    /* background: #fff; */
+    width: 60%;
+    height: 40%;
+    position: relative;
+    display: flex;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+   justify-content:center;
+   align-items: center;
+   flex-direction: column;
+   border-radius: 2px;
+}
+.text_box h2{
+    color: #fff;
+    text-shadow: 0 0 2px rgb(0,0,0,.3);
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.text_box h2 span{
+    color: rgb(15, 255, 255);
+}
+.text_box p{
+    color: #fff;
+    text-shadow: 0 0 2px rgb(0,0,0,.3);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.text_box button{
+    width: 50%;
+    height: 22%;
+    text-transform: capitalize;
+    background: red;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: 100ms;
+}
+.text_box button:hover{
+    transform: scale(.9);
+}
+.text_box button a{
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: consoles;
+    font-family: 'Nunito', sans-serif;
+}
+
+.social_icons{
+    position:absolute;
+    right: 1%;
+    width: 10%;
+    height: 50%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.social_icons a{
+    margin: 10px 0;
+    font-size: 2rem;
+    color: #fff;
+    transition-duration: 100ms;
+}
+.social_icons a:hover{
+    transform: scale(.9);
+}
+
+.scroll_down{
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    /* background-color: red; */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    place-items: center;
+    display: grid;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.664);
+    border-radius: 40px;
+    overflow: hidden;
+}
+.scroll_down i{
+    color: #fff;
+    animation: scroll 2s linear infinite;
+}
+@keyframes scroll {
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(70px);
+    }
+}
+
+
+
+/* this is the text section */
+.text_sec{
+    width: 100%;
+    height: 50vh;
+    /* background-color: red; */
+    position: relative;
+}
+.text_sec h2{
+    font-size: 2rem;
+    margin: 20px 50px;
+    text-transform: capitalize;
+}
+.text_sec .box_set{
+    width: 100%;
+    height: 80%;
+    /* background-color: blue; */
+    position: absolute;bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_set .img_sec{
+    width: 20%;
+    height: 100%;
+    background: url(../images/me.png);
+    background-position: center;
+    background-size: cover;
+    /* background-color: red; */
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.116);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+.box_set .txt_sec{
+    width: 70%;
+    height: 100%;
+    /* background-color: red; */
+    place-items: center;
+    display: grid;
+    padding: 6px;
+    margin-left: 15px;
+    position: relative;
+}
+.txt_sec button{
+    padding: 14px 50px;
+    margin-left: 30px;
+    position: relative;
+    right: 40%;
+    background-color: rgb(100, 167, 0);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.txt_sec button a{
+    color: #fff;
+    text-decoration: none;
+}
+.img_sec .hover_img{
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    position: absolute;
+    background-color: rgb(6, 6, 71);
+    visibility: hidden;
+    place-items: center;
+    display: grid;
+}
+.hover_img p{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.img_sec:hover .hover_img{
+    visibility: visible;
+}
+
+/* this is the card section */
+.card_sec{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.card_sec h2{
+    margin: 20px;
+    font-size: 2rem;
+}
+
+.card_sec .box_team{
+    width: 90%;
+    height: 70%;
+    top: 14%;
+    /* background-color: red; */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box_team .card{
+    width: 33%;
+    height: 90%;
+    background-color: rgb(255, 255, 255);
+    transition-duration: 400ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgb(0,0,0,.1);
+}
+
+.box_team .card .fa-user-circle{
+    font-size: 5rem;
+    color: rgba(42, 179, 8, 0.589);
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 4px rgb(0,0,0,.3);
+    margin: 10px 0;
+}
+.box_team .card h5{
+font-size: 2rem;
+text-transform: capitalize;  
+margin: 10px 0; 
+color: rgb(0,0,0,.3);
+}
+.box_team .card button{
+    margin: 10px 0;
+    padding: 10px 30px;
+    background-color: rgba(42, 179, 8, 0.589);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
+.box_team .card p{
+    margin: 10px 0;
+    color: rgb(0,0,0,.9);
+}
+.count_part{
+    width: 100%;
+    height: 30vh;
+    /* background-color: red; */
+    user-select: none;
+}
+.count_part h2{
+    margin: 20px;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.count_part .box_seter{
+    width: 100%;
+    height: 60%;
+    /* background-color: rgb(194, 154, 154); */
+    display: flex;justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.box_seter div{
+    width: 20%;
+    height: 80%;
+    /* background-color: red; */
+    display: flex;justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: capitalize;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    border-radius: 4px;
+    margin: 0 5px;
+}
+.box_seter div h3{
+    font-size: 2rem;
+}
+
+/* this is the price section */
+.price{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.price h2{
+    text-transform: capitalize;
+    margin: 20px;
+    font-size: 2rem;
+}
+
+.card_price{
+    width: 100%;
+    height: 80%;
+    /* background-color: red; */
+    position: relative;top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_price .card{
+    width: 30%;
+    height: 80%;
+    background-color: #fff;
+    margin: 0 8px;
+    border: 1px solid rgb(0,0,0,.1);
+    transition-duration: 300ms;
+    padding: 5px;
+}
+.card_price .card .card_header{
+    width: 100%;
+    height: 15%;
+    background-color: rgb(5, 46, 255);
+    place-items: center;
+    display: grid;
+    color: #fff;
+    font-size: 2rem;
+}
+.card_price .card .card_body{
+    width: 100%;
+    height: 70%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_price .card .card_body ul{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+}
+.card_body ul li{
+    width: 100%;
+    height: 14%;
+    /* background-color: red; */
+    margin: 5px 0;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_body ul li .money{
+    font-size: 2.5rem;
+    position: relative;
+    color: red;
+}
+.card_price .card_footer{
+    width: 100%;
+    height: 15%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_footer button{
+    padding: 10px 40px;
+    text-transform: capitalize;
+    background-color: rgba(42, 179, 8, 0.589);
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.card_footer button a{
+    color: #fff;
+    text-decoration: none;
+}
+.card_price .card:hover{
+    box-shadow: none;
+}
+.card_price .card:nth-child(2){
+    transform: translateY(-20px);
+}
+.contact{
+    width: 100%;
+    height: 70vh;
+    /* background-color: red; */
+    overflow: hidden;
+}
+.contact h2{
+    text-transform: capitalize;
+    font-size: 2rem;
+    position: relative;top: 30px;
+    left: 30px;
+}
+.contact p{
+    text-transform: capitalize;
+    font-size: 1rem;
+    position: relative;top: 10%;
+    left: 30px;
+}
+.cnt{
+    width: 100%;
+    height: 80%;
+    /* background-color: red; */
+    position: relative;top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cnt input{
+    width: 70%;
+    height: 12%;
+    background-color: transparent;
+    outline: none;
+    border-radius: 4px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 6px 0;
+    border: 1px solid rgb(0,0,0,.3);
+}
+.cnt textarea{
+    width: 70%;
+    height: 30%;
+    background-color: transparent;
+    /* background-color: red; */
+    padding: 17px;
+    border: 1px solid rgb(0,0,0,.3);
+    outline: none;
+    border-radius: 4px;
+    margin: 5px 0;
+}
+.cnt button{
+    position: relative;
+    top: 20px;
+    padding: 13px 40px;
+    text-transform: capitalize;
+    background-color: rgba(0, 128, 28, 0.9);
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+/* this is the footer section */
+footer{
+    width: 100%;
+    height: 40vh;
+    background-color: rgb(19, 5, 150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 5px; */
+    position: relative;
+
+}
+footer .box{
+    width: 30%;
+    height: 70%;
+    margin: 0 5px;
+    text-align: center;
+    /* background-color: blue; */
+    position: relative;bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer .box .box_header{
+    width: 100%;
+    height: 20%;
+    /* background-color: red; */
+    place-items: center;
+    display: grid;
+}
+.box_header h3{
+    color: #fff;
+    text-transform: uppercase;
+}
+footer .box .box_body{
+    width: 100%;
+    height: 80%;
+    /* background-color: red; */
+    place-items: center;
+    display: grid;
+    position: relative;
+    top: -4px;
+}
+.box_body p{
+    color: #fff;
+}
+.box_body ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box_body ul li{
+    width: 60%;
+    height: 20%;
+    /* background-color: red; */
+    margin: 2px 0;
+    place-items: center;
+    display: grid;
+}
+.box_body ul li a{
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.ftr{
+    position: absolute;bottom: 5%;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.top_set{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 2%;
+    z-index: 9999;
+    bottom: 2%;
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: rgb(247, 255, 239);
+    box-shadow: 0 0 4px rgb(0,0,0,.3);
+    cursor: pointer;
+    transition-duration: 100ms;
+}
+.top_set:hover{
+    transform: scale(.9);
+}
+
+/* this is the media queries */
+@media (max-width:768px) {
+    nav .logo{
+        width: 50%;
+    }
+   nav .menu_items{
+        display: none;
+    }
+    nav .menu_set{
+        display: block;
+        position: absolute;
+        right: 6%;
+        width: 60px;
+        height: 50px;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        box-shadow: 0 0 6px rgb(0,0,0,.3);
+        border-radius: 3px;
+        cursor: pointer;
+        z-index: 999;
+    }
+    nav .menu_set i{
+        font-size: 1.6rem;
+    }
+    .sider_nav{
+        display: block;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.911);
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        transition-duration: 200ms;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+        overflow: hidden;
+    }
+    .sider_nav a{
+        transition-duration: 500ms;
+        color: rgba(0, 0, 0, 0.822);
+        text-transform: capitalize;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin: 16px 0;
+        /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    }
+    .open_sider{
+        width: 100%;
+        right: 0;
+    }
+    .center_space .text_box{
+        width: 90%;
+        height: 50%;
+    }
+    .text_box button{
+        width: 90%;
+        height: 18%;
+    }
+    .social_icons{
+        position:absolute;
+        bottom: 18%;
+        width: 100%;
+        height: 10%;
+        /* background-color: blue; */
+       flex-direction: row;
+    }
+    .social_icons a{
+      margin: 0 20px;
+      font-size: 1.5rem;
+    }
+    .text_sec{
+        height: 100vh;
+    }
+    .text_sec h2{
+        margin: 4px 50px;
+        position: relative;top: 10%;
+    }
+    .text_sec .box_set{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box_set .img_sec{
+        width: 40%;
+        height: 50%;
+    }
+    .box_set .txt_sec{
+        width: 90%;
+        height: 57%;
+        /* background-color: red; */
+        font-size: .9rem;
+        margin-top: 10px;
+    }
+    .txt_sec button{
+        padding: 8px 45px;
+        left:20%;
+        font-size: 1rem;
+    }
+    .card_sec{
+        height: auto;
+    }
+    .card_sec .box_team{
+        flex-direction: column;
+    }
+    .box_team .card{
+        width: 95%;
+        margin: 4px 0;
+    }
+    .box_seter div{
+        width: 25%;
+       margin: 0 1px;
+    }
+    .box_seter div h3{
+        font-size: 1.4rem;
+    }
+    .price{
+        height: auto;
+    }
+    .price .card_price{
+       flex-direction: column; 
+    }
+    .price .card_price .card{
+        width: 80%;
+        padding: 10px 5px;
+        margin-bottom: 20px;
+    }
+    .card_price .card:nth-child(2){
+        transform: translateY(0px);
+    }
+    .price .card_price .card button{
+        padding: 7px 30px;
+        margin-top: 7px;
+    }
+    footer{
+        height: auto;
+        flex-direction: column;
+    }
+    footer .box{
+        width: 80%;
+        height: 20%;
+        margin: 5px 0px;
+        /* background-color: red; */
+    }
+    footer .box .box_header{
+        width: 100%;
+        height: 20%;
+        /* background-color: red; */
+        place-items: center;
+        display: grid;
+        margin-bottom: 40px;
+    }
+    footer .box .box_body{
+        top: -35px;
+    }
+    .ftr{
+        position: absolute;bottom: 0%;
+        color: #fff;
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: .5rem;
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
